@@ -1,0 +1,7 @@
+name: JCraftCore
+main: me.totalfreedom.totalfreedommod.TotalFreedomMod
+version: 0.2
+description: Plugin for the JCraft server.
+depend: [Aero, WorldEdit]
+softdepend: [BukkitTelnet, Essentials, LibsDisguises]
+authors: [Madgeek1450, Prozza xBarkPuppy1]
