@@ -1,0 +1,227 @@
+#
+# JCraft 0.2 Configuration
+# by Madgeek1450 and Prozza edited by xBark
+#
+
+# Generic server information
+server:
+  # You should change this to your server's name
+  name: JCraft
+
+  # The address your server is located at. Please do not include the port.
+  address: JCraft.tk
+
+  # Shown at the server list
+  motd: JCraft &8- Minecraft %mcversion%
+
+  # Every word in the MOTD will be a different color unless prefixed by a color code
+  colorful_motd: true
+
+  # All players who show up as owner
+  owners:
+    - JCDiamond_Miner
+
+  # All players who show up as Developers/Managers
+  Developers/Managers: 
+    - xBarkPuppy1
+    - rovertpug
+  # URL players should appeal for bans at
+  ban_url: 
+
+  # URL players should appeal for permanent bans at
+  permban_url: 
+
+  # The kick message sent to players when logging in with the wrong hostname
+  kickmsg: You have been kicked from the server - Please connect using %address%
+
+
+# Blocking certain events
+allow:
+  fire_place: false
+  fire_spread: false
+  fluid_spread: false
+  lava_place: false
+  lava_damage: false
+  water_place: false
+  tnt_minecarts: false
+  explosions: false
+
+# Blocked commands:
+#
+# How blocked commands work:
+# All sections described below are delimited by colon characters.
+# Make sure that you block a command by its main command name, not an alias
+# as all aliases are blocked by default. Commands are case-insensitive.
+#
+
+
+# Nuking prevention
+nukemonitor:
+  enabled: true
+  count_break: 100
+  count_place: 40
+  range: 10.0
+
+freecam_trigger_count: 10
+explosive_radius: 4.0
+
+# Show all attempted commands in the log, will result in duplicate log messages
+preprocess_log: true
+
+# Disable certain events
+disable:
+  night: true
+  weather: true
+
+
+# Enable misc. features
+landmines_enabled: false
+mp44_enabled: false
+tossmob_enabled: false
+
+# Moblimiter
+moblimiter:
+  enabled: true
+  max: 50
+  disable:
+    dragon: true
+    ghast: true
+    slime: true
+    giant: true
+
+# Flatlands
+flatlands:
+  generate: true
+
+  # Flatlands generation parameters - Uses CleanroomGenerator syntax - http://dev.bukkit.org/server-mods/cleanroomgenerator/
+  generate_params: 16,stone,32,dirt,1,grass
+
+# Admin-Only Mode
+admin_only_mode: false
+
+# Protected Areas - Protect areas so that only superadmins can directly modify blocks in those areas. WorldEdit and other such plugins might bypass this.
+protectarea:
+  enabled: true
+  auto_protect_spawnpoints: true
+  auto_protect_radius: 50.0
+
+# Host Sender Names - Names that indicate automated services or host-based consoles you want to block from using some commands.
+# Make sure these are all lower-case.
+host_sender_names:
+  - rcon
+  - remotebukkit
+
+# Announcer
+announcer:
+  enabled: true
+
+  # Interval between announcements, in seconds.
+  interval: 600
+
+  # Prefix for all announcements
+  prefix: '&5[&eTotalFreedom&5] &b'
+
+  announcements:
+    - 'Be sure to visit our forums at &6'
+    - 'You can always review the server rules here: &6'
+    - 'If you are not OP, be sure to ask!'
+    - 'Somebody breaking the rules? Report it! /report <user> <reason>'
+    - 'Griefing is not allowed!'
+    - 'Hacked clients are allowed!'
+    - 'Interested in becoming admin? Do "/ai" for more information!'
+    - 'You may view all online administrators via "/list -a"'
+    - 'Save your buildings via WorldEdit!  for more information!'
+    - 'Famous players, such as Notch, are always fake! We are an offline/cracked server!'
+    - 'xd!'
+    - 'xd'
+    - 'JCDiamond is the owner of JCraft.'
+    - 'Server lagging?  Check the lag via "/tps"'
+    - 'You are allowed to record and stream videos on JCraft.'
+    - 'Player vs player while in creative or god mode it forbidden!'
+    - 'Spawn killing is forbidden!'
+    - 'Invisible potions are allowed!'
+    - 'Serial griefing and trolling will result in a permanent ban!'
+    - 'TotalFreedom does not accept any form of donations!'
+    - 'Racism, nazism, and sexism are strictly forbidden!'
+    - 'Join our Mumble server! IP: 64.34.202.140:2862'
+
+# Famous players - cannot be banned by username
+famous_players:
+  - honeydew
+  - xephos
+  - captainsparklez
+  - truemu
+  - xBarkPuppy1
+  - fvdisco
+  - sethbling
+  - notch
+  - jeb_
+  - gamechap
+  - bertiechap
+  - vechs
+  - antvenom
+  - chimneyswift
+  - deadmau5
+  - etho
+  - ethoslab
+  - skydoesminecraft
+  - skythekidrs
+  - tobyturner
+  - xxslyfoxhoundxx
+  - paulsoaresjr
+  - sips_
+  - deadlox
+  - xxslyxx
+  - jeromeasf
+  - dinnerbone
+  - grumm
+  - grum
+  - evilseph
+  - cavemanfilms
+  - herobrine
+  - whiteboy7thst
+  - stampylonghead
+  - stampylongnose
+  - dantdm
+  - gizzy14gazza
+  - furiousdestroyer
+
+# IPs that can not be supered
+noadmin_ips:
+  - 167.114.97.16
+
+# Pet Protect - Prevent tamed pets from being killed.
+petprotect:
+  enabled: true
+
+# Logviewer
+logs:
+  url: ''
+  secret: ''
+
+# Mojang service checker
+service_checker_url: http://status.mojang.com/check
+
+# HTTPD server
+httpd:
+  enabled: true
+  port: 28966
+  public_folder: ./public_html
+
+# Inactivity Auto-Kick (Requires Essentials)
+autokick:
+  enabled: true
+
+  # Percentage of server player capacity used at which players will be automatically kicked for being inactive. Range: 0.0 - 1.0
+  threshold: 0.9
+
+  # Time, in seconds, after which a player should be kicked when inactive
+  time: 120
+
+# Players with access to the overlord command
+overlord_ips:
+  - 176.56.237.227
+  - 192.184.86.138
+  - 107.191.101.27
+  - 178.62.117.94
+  - 141.101.104.243
